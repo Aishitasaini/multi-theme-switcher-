@@ -1,69 +1,30 @@
-# React + TypeScript + Vite
+# 🌗 Multi-Theme Switcher App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React + TypeScript web application that allows users to switch between multiple themes such as Light, Dark, and Solar. Built with a strong focus on clean design, persistent theme settings, and smooth user experience.
 
-Currently, two official plugins are available:
+## 🔧 Tech Stack
+- **React** with **TypeScript**
+- **CSS Modules** for theming
+- **Bootstrap** for UI components
+- **React Router** for multi-page navigation
+- **Context API** for global theme management
+- **localStorage** for theme persistence
+- **Vite** as the build tool
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✅ Features
+- Toggle between multiple themes with a smooth transition
+- Persistent theme even after page refresh
+- Responsive layout for all screen sizes
+- Subtle animations for enhanced UX
+- Multi-page routing (Home, About)
+- Clean and maintainable folder structure
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📁 Folder Structure (Simplified)
+src/
+├── assets/ # Theme icons and assets
+├── components/ # Header, Footer, ThemeToggle etc.
+├── contexts/ # ThemeContext
+├── pages/ # Home.tsx, About.tsx
+├── themes/ # CSS Modules per theme
+├── App.tsx
+├── main.tsx
